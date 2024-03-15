@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon?<generated>" type="image/png" />
 
-        <meta property="og:image" content="<generated>" />
+        <meta property="og:image" content="/icon?<generated>" />
         <meta property="og:image:alt" content="About Acme" />
         <meta property="og:image:type" content="image/png" />
       </head>

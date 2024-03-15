@@ -18,6 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/icon?<generated>" type="image/png" />
+
+        <meta property="og:image" content="<generated>" />
+        <meta property="og:image:alt" content="About Acme" />
+        <meta property="og:image:type" content="image/png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fhellipy - My site
 
-## Getting Started
+This is the front-end of a project for uploading files to Amazon S3. It was developed in React.js and allows users to select local files for upload to an Amazon S3 bucket.
 
-First, run the development server:
+### Technologies Used:
+
+- React.js
+- Next.js
+- TypeScript
+- Tailwind
+- Lucide
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# development
+$ pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## SCRIPTS
 
-## Learn More
+- Run tsc type checking without generating build artifact
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+$ pnpm check
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Run tsc type checking and generate the build artifact (.next folder)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+$ pnpm build
+```
 
-## Deploy on Vercel
+- Run the build artifact (.next folder) and display a preview of the project at [http://localhost:4173](http://localhost:4173)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+$ pnpm preview
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Delete the build artifact (.next folder)
+
+```bash
+pnpm clean
+```

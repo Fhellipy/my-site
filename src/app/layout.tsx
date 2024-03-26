@@ -1,3 +1,4 @@
+import { ScrollToTop } from "@shared/components/ui";
 import "@shared/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,7 +20,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon?<generated>" type="image/png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+
+        <ScrollToTop />
+      </body>
     </html>
   );
 }

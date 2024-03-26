@@ -7,27 +7,35 @@
     --header-height: 4.5rem;
     --view-height: calc(100dvh - var(--header-height));
 
-    --background: 0, 0%, 100%;
-    --foreground: 222.2, 84%, 4.9%;
-    --primary: 221.2, 83.2%, 53.3%;
-    --primary-foreground: 210, 40%, 98%;
-    --secondary: 210, 40%, 96.1%;
-    --secondary-foreground: 222.2, 47.4%, 11.2%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --primary: 217.2 91% 39%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --ring: 215 20% 65%;
-    --border: 214.3 31.8% 91.4%;
+    --border: 215 16% 47%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 215 16% 47%;
 
     --radius: 0.5rem;
+
+    scroll-behavior: smooth;
+    scroll-padding: var(--header-height) 0 0 0;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply scroll-smooth border-border;
   }
   body {
     @apply bg-background text-foreground;

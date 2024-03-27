@@ -15,34 +15,31 @@ function LinksHeader() {
   return (
     <div className="flex flex-col gap-2 p-1 sm:mt-0 sm:flex-row sm:items-center sm:justify-end">
       <Link
-        href="#quem-sou"
-        className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
-      >
-        Quem sou
-      </Link>
-      <Link
         href="#sobre"
         className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
       >
         Sobre mim
       </Link>
-      <Link
-        href="#servicos"
-        className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
-      >
-        Serviços
-      </Link>
-      <Link
-        href="#projetos"
-        className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
-      >
-        Projetos
-      </Link>
+
       <Link
         href="#contato"
         className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
       >
-        Contato
+        Contatos
+      </Link>
+
+      <Link
+        href="#experiencia-profissional"
+        className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
+      >
+        Experiência Profissional
+      </Link>
+
+      <Link
+        href="#projetos-pessoais"
+        className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
+      >
+        Projetos Pessoais
       </Link>
     </div>
   );
@@ -99,20 +96,6 @@ export function Header() {
             <LinksHeader />
           </div>
         </div>
-      </nav>
-    </header>
-  );
-
-  return (
-    <header className="flex w-full items-center justify-between gap-4 border bg-background p-2">
-      <h1 className="text-2xl text-white">Header</h1>
-
-      <nav className="flex gap-2 border p-2">
-        <Link href="#quem-sou">Quem sou</Link>
-        <Link href="#sobre">Sobre mim</Link>
-        <Link href="#servicos">Serviços</Link>
-        <Link href="#projetos">Projetos</Link>
-        <Link href="#contato">Contato</Link>
       </nav>
     </header>
   );

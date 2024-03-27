@@ -1,7 +1,11 @@
 "use client";
 
-import { Footer, Header } from "@shared/components/common";
-import { motion } from "framer-motion";
+import {
+  AboutMe,
+  Contacts,
+  HeroParallax,
+  ProfessionalExperienceList,
+} from "@modules/home";
 import { TriangleAlertIcon } from "lucide-react";
 import Link from "next/link";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
@@ -57,126 +61,21 @@ export default function Home() {
     </main>
   );
 
-  return (
-    <main className="flex  flex-col items-center justify-between gap-2 bg-background text-muted-foreground">
-      <Header />
+  const items = [
+    {
+      id: "cards",
+      content: (
+        <div className="flex w-full flex-col items-center justify-between gap-6 px-6 sm:flex-row">
+          <AboutMe />
+          <Contacts />
+        </div>
+      ),
+    },
+    {
+      id: "experiencia-profissional",
+      content: <ProfessionalExperienceList />,
+    },
+  ];
 
-      <div className="flex min-h-[--view-height] w-full flex-col gap-6 p-2">
-        <motion.div
-          className="min-h-96 w-full bg-blue-400"
-          initial={{ opacity: 0, x: 360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          id="about"
-          className="min-h-96 w-full bg-green-800"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-
-        <motion.div
-          className="min-h-96 w-full bg-secondary"
-          initial={{ opacity: 0, x: -360 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -360 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
-      </div>
-
-      <Footer />
-    </main>
-  );
+  return <HeroParallax items={items} />;
 }

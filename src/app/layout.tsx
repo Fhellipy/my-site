@@ -1,5 +1,7 @@
+import { Footer, Header } from "@shared/components/common";
 import { ScrollToTop } from "@shared/components/ui";
 import "@shared/styles/globals.css";
+import { cn } from "@shared/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -7,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fhellipy - Portfolio",
-  description: "Documentando minha jornada como desenvolvedor fullstack",
+  description: "Documentando minha jornada como desenvolvedor Fullstack",
 };
 
 export default function RootLayout({
@@ -16,12 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <link rel="icon" href="/icon?<generated>" type="image/png" />
       </head>
-      <body className={inter.className}>
+      <body className={cn("bg-background", inter.className)}>
+        <Header />
         {children}
+        <Footer />
 
         <ScrollToTop />
       </body>

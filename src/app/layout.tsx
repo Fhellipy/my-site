@@ -1,3 +1,4 @@
+import fhellipyImage from "@shared/assets/images/fhellipy.png";
 import { Footer, Header } from "@shared/components/common";
 import { ScrollToTop } from "@shared/components/ui";
 import "@shared/styles/globals.css";
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/icon?<generated>" type="image/png" />
+        <link rel="icon" href={fhellipyImage.src} type="image/png" />
       </head>
       <body className={cn("bg-background", inter.className)}>
         <Header />

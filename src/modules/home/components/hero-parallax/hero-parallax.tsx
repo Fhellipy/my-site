@@ -47,7 +47,7 @@ export function HeroParallax({ items = [] }: HeroParallaxProps) {
     springConfig,
   );
 
-  const firstRowPaddingBlock = useSpring(
+  const firstRowPaddingTop = useSpring(
     useTransform(scrollYProgress, [0, 0.8], [250, -2]),
     springConfig,
   );
@@ -60,6 +60,7 @@ export function HeroParallax({ items = [] }: HeroParallaxProps) {
       <HeaderParallax />
 
       <motion.div
+        className="pb-40"
         style={{
           rotateX,
           rotateZ,
@@ -68,21 +69,21 @@ export function HeroParallax({ items = [] }: HeroParallaxProps) {
         }}
       >
         <motion.div
-          className="space-x flex w-full flex-row space-x-20"
+          className="space-x flex w-full flex-row space-x-20 pb-20"
           style={{
-            paddingBlock: firstRowPaddingBlock,
+            paddingTop: firstRowPaddingTop,
           }}
         >
           {items[0] && <ItemParallax item={items[0]} translate={translateX} />}
         </motion.div>
 
-        <motion.div className="mb-20 flex flex-row space-x-20">
+        <motion.div className="flex flex-row space-x-20">
           {items[1] && (
             <ItemParallax item={items[1]} translate={translateXReverse} />
           )}
         </motion.div>
 
-        <motion.div className="flex flex-row-reverse space-x-20 space-x-reverse">
+        <motion.div className="mb-40 flex flex-row-reverse space-x-20 space-x-reverse">
           {items[2] && <ItemParallax item={items[2]} translate={translateX} />}
         </motion.div>
       </motion.div>

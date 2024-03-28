@@ -5,10 +5,24 @@ import {
   Contacts,
   HeroParallax,
   ProfessionalExperienceList,
+  Tools,
 } from "@modules/home";
 import { TriangleAlertIcon } from "lucide-react";
 import Link from "next/link";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+
+const images = [
+  {
+    id: 1,
+    src: "https://via.placeholder.com/300x200",
+    alt: "Project 1",
+  },
+  {
+    id: 2,
+    src: "https://via.placeholder.com/300x200",
+    alt: "Project 2",
+  },
+];
 
 export default function Home() {
   return (
@@ -60,7 +74,6 @@ export default function Home() {
       </p>
     </main>
   );
-
   const items = [
     {
       id: "cards",
@@ -73,7 +86,32 @@ export default function Home() {
     },
     {
       id: "experiencia-profissional",
-      content: <ProfessionalExperienceList />,
+      content: (
+        <ProfessionalExperienceList
+          projects={[
+            {
+              images,
+              description: "Descrição do projeto",
+            },
+            {
+              images,
+              description: "Descrição do projeto",
+            },
+            {
+              images,
+              description: "Descrição do projeto",
+            },
+            {
+              images,
+              description: "Descrição do projeto",
+            },
+          ]}
+        />
+      ),
+    },
+    {
+      id: "ferramentas",
+      content: <Tools />,
     },
   ];
 

@@ -23,61 +23,28 @@ export function HeroParallax({ items = [] }: HeroParallaxProps) {
   );
 
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-750, 300]),
+    useTransform(scrollYProgress, [0, 0.2], [250, 0]),
     springConfig,
   );
 
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 0.4], [1100, 0]),
-    springConfig,
-  );
-
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig,
-  );
-
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [12, 0]),
-    springConfig,
-  );
-
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig,
-  );
-
-  const firstRowPaddingTop = useSpring(
-    useTransform(scrollYProgress, [0, 0.8], [250, -2]),
+    useTransform(scrollYProgress, [0, 0.3], [1100, 0]),
     springConfig,
   );
 
   return (
     <main
       ref={ref}
-      className="relative flex min-h-[--view-height] flex-col self-auto overflow-hidden p-6 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex min-h-[--view-height] flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <HeaderParallax />
 
-      <motion.div
-        className="pb-40"
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-      >
-        <motion.div
-          className="space-x flex w-full flex-row space-x-20 pb-20"
-          style={{
-            paddingTop: firstRowPaddingTop,
-          }}
-        >
+      <motion.div className="pb-40 opacity-100" style={{ translateY }}>
+        <motion.div className="space-x flex min-h-[--view-height] w-full flex-row items-center justify-center space-x-20 py-20">
           {items[0] && <ItemParallax item={items[0]} translate={translateX} />}
         </motion.div>
 
-        <motion.div className="flex flex-row space-x-20">
+        <motion.div className="flex min-h-[--view-height] flex-row items-center justify-center space-x-20 bg-black">
           {items[1] && (
             <ItemParallax item={items[1]} translate={translateXReverse} />
           )}

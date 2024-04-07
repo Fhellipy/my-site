@@ -2,8 +2,9 @@
 
 import { cn } from "@shared/utils";
 import { motion } from "framer-motion";
+import { type HTMLAttributes } from "react";
 
-type BackgroundGradientProps = {
+type BackgroundGradientProps = HTMLAttributes<HTMLDivElement> & {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
@@ -11,7 +12,13 @@ type BackgroundGradientProps = {
 };
 
 export function BackgroundGradient(props: BackgroundGradientProps) {
-  const { children, className, containerClassName, animate = true } = props;
+  const {
+    children,
+    className,
+    containerClassName,
+    animate = true,
+    ...rest
+  } = props;
 
   const variants = {
     initial: {
@@ -25,7 +32,7 @@ export function BackgroundGradient(props: BackgroundGradientProps) {
   return (
     <div
       className={cn(
-        "group relative my-2 w-full p-[4px] transition-all hover:-translate-y-5 sm:my-0",
+        "group relative my-2 w-full p-[4px] transition-all sm:my-0",
         containerClassName,
       )}
     >
@@ -72,7 +79,7 @@ export function BackgroundGradient(props: BackgroundGradientProps) {
         )}
       />
 
-      <div className={cn("relative z-10 h-full w-full", className)}>
+      <div {...rest} className={cn("relative z-10 h-full w-full", className)}>
         {children}
       </div>
     </div>

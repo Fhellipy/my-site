@@ -1,15 +1,15 @@
-import fhellipyImage from "@shared/assets/images/fhellipy.png";
 import { Footer, Header } from "@shared/components/common";
 import { ScrollToTop } from "@shared/components/ui";
 import "@shared/styles/globals.css";
 import { cn } from "@shared/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import fhellipyImage from "public/fhellipy.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fhellipy - Portfolio",
+  title: "Fhellipy Conceição",
   description: "Documentando minha jornada como desenvolvedor Fullstack",
 };
 

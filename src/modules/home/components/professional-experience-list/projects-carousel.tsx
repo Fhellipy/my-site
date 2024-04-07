@@ -33,7 +33,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
 
   return (
     <div
-      className="relative w-full min-w-[250px] max-w-[85rem] overflow-hidden rounded-t-xl"
+      className="relative w-full min-w-[250px] overflow-hidden rounded-t-xl"
       ref={emblaRef}
     >
       <div className="flex touch-pan-y">
@@ -46,8 +46,8 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
               className="block max-h-96 min-h-[10rem] w-full object-cover"
               src={project.src}
               alt={project.alt}
-              width={300}
-              height={200}
+              width={1920}
+              height={1080}
             />
           </div>
         ))}

@@ -22,7 +22,7 @@ function LinksHeader() {
       </Link>
 
       <Link
-        href="#contato"
+        href="#contatos"
         className="rounded-md p-2 font-black text-secondary-foreground hover:bg-muted-foreground"
       >
         Contatos

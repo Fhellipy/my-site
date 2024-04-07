@@ -4,8 +4,8 @@ import { MdEmail } from "react-icons/md";
 
 export function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 px-2 py-4">
-      <div className="mt-1 flex items-center gap-4">
+    <footer className="flex flex-col items-center justify-center gap-4 bg-black px-2 py-4">
+      <div className="mt-1 flex items-center gap-2 sm:gap-4">
         <Link
           target="_blank"
           href="https://instagram.com/_fhellipy"

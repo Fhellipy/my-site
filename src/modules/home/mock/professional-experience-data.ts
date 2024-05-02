@@ -54,6 +54,8 @@ export const PROFESSIONAL_EXPERIENCE_DATA = [
         alt: "Imagem dos métodos de pagamentos do Dantas Bikes",
       },
     ],
+    resume:
+      "Dantas Bikes é um e-commerce de bicicletas e acessórios. Possui layout editável, sistema de gestão de produtos e pedidos, integração de pagamentos com cartão de crédito, PIX e outros métodos.",
     description:
       "Dantas Bikes é um site de e-commerce de uma loja de bicicletas e acessórios para bicicletas. Ele possui um layout que pode ser alterado através do seu painel administrativo. O site conta com um sistema de gerenciamento de produtos e pedidos, além de um sistema de pagamento integrado que aceita diversas formas de pagamento, incluindo dois cartões de crédito e PIX, e vários outros métodos de pagamento.",
     link: "https://dantasbikes.com.br",
@@ -97,6 +99,8 @@ export const PROFESSIONAL_EXPERIENCE_DATA = [
         alt: "Imagem dos produtos do Ecommerce admin em lightmode",
       },
     ],
+    resume:
+      "Um painel admin para o e-commerce Dantas Bikes. Gerencia layout, produtos, pedidos, promoções e estatísticas de vendas. Possui autenticação de usuários, é responsivo e acessível internamente.",
     description:
       "Admin Dantas Bikes é um painel administrativo para gerenciar o site de e-commerce Dantas Bikes. Ele pode alterar o layout do site, gerenciar produtos e pedidos, criar promoções e cupons, e visualizar estatísticas de vendas. O painel possui um sistema de autenticação e autorização de usuários, e é responsivo, podendo ser acessado de qualquer dispositivo desde que tenha acesso à rede interna da empresa.",
   },
@@ -133,6 +137,8 @@ export const PROFESSIONAL_EXPERIENCE_DATA = [
         alt: "Imagem do dashboard 3 do Ello sports admin em darkmode",
       },
     ],
+    resume:
+      "Ello sports Admin é um painel para gerenciar o site de venda de ingressos Ello sports da Dantas Eletro. Permite alterar layout, gerenciar eventos e pedidos, e ver estatísticas de vendas. Possui sistema de autenticação, é responsivo e acessível de qualquer dispositivo na rede interna da empresa.",
     description:
       "Ello sports Admin é um painel administrativo para gerenciar o site de venda de ingressos Ello sports desenvolvido para a empresa Dantas Eletro. Ele pode alterar o layout do site, gerenciar eventos e pedidos, e visualizar estatísticas de vendas. O painel possui um sistema de autenticação e autorização de usuários, e é responsivo, podendo ser acessado de qualquer dispositivo desde que tenha acesso à rede interna da empresa.",
   },
@@ -164,6 +170,8 @@ export const PROFESSIONAL_EXPERIENCE_DATA = [
         alt: "Imagem do registro do sistema de chamados interno",
       },
     ],
+    resume:
+      "O Sistema de Chamados Interno da empresa Dantas Eletro gerencia chamados de suporte técnico, manutenção e outros, com chat interno e painel administrativo. Tem 3 sessões (administrador, técnico e usuário), com níveis de acesso. É responsivo e acessível via rede interna.",
     description:
       "Sistema de Chamados Interno é um sistema de gerenciamento de chamados para empresa Dantas Eletro. Ele permite que os funcionários registrem chamados de suporte técnico, manutenção, e outros tipos de chamados. O sistema possui um chat interno para comunicação entre os funcionários e um painel administrativo para gerenciar os chamados. O sistema possui 3 sessões, sendo elas: a do administrador, a do técnico e a do usuário comum e cada sessão tem nível de acesso para as informações apresentadas. O sistema é responsivo, podendo ser acessado de qualquer dispositivo desde que tenha acesso à rede interna da empresa.",
   },

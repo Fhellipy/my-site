@@ -34,7 +34,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
 
   return (
     <div
-      className="shadow-custom relative max-h-[300px] w-full min-w-[250px] overflow-hidden rounded-xl"
+      className="relative max-h-[300px] w-full min-w-[250px] overflow-hidden rounded-xl shadow-custom"
       ref={emblaRef}
     >
       <div className="flex touch-pan-y">

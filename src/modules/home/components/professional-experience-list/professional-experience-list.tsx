@@ -11,7 +11,7 @@ export function ProfessionalExperienceList() {
         {PROFESSIONAL_EXPERIENCE_DATA.map((project, index) => (
           <BackgroundGradient
             key={index}
-            className="shadow-custom flex w-fit flex-col-reverse items-center gap-4 rounded-xl bg-black p-4 text-foreground md:flex-row lg:gap-6"
+            className="flex w-fit flex-col-reverse items-center gap-4 rounded-xl bg-black p-4 text-foreground shadow-custom md:flex-row lg:gap-6"
             containerClassName="w-fit"
           >
             <p className="h-full text-justify md:w-80">{project.resume}</p>

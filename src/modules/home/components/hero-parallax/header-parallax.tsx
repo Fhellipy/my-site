@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 export function HeaderParallax() {
   return (
-    <section className="bg-custom-background relative left-0 top-0 mx-auto flex h-[48rem] w-full flex-col items-center justify-center gap-8 bg-cover bg-no-repeat object-cover p-6">
+    <section className="relative left-0 top-0 mx-auto flex h-[48rem] w-full flex-col items-center justify-center gap-8 bg-custom-background bg-cover bg-no-repeat object-cover p-6">
       <span className="h-60 w-60 sm:h-80 sm:w-80">
         <Image
           src="/fhellipy.png"

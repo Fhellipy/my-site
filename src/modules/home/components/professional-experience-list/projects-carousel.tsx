@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback } from "react";
 
 export type ImageType = {
@@ -33,7 +34,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
 
   return (
     <div
-      className="relative w-full min-w-[250px] overflow-hidden rounded-t-xl"
+      className="shadow-custom relative max-h-[300px] w-full min-w-[250px] overflow-hidden rounded-xl"
       ref={emblaRef}
     >
       <div className="flex touch-pan-y">
@@ -42,13 +43,16 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
             key={project.id}
             className="relative min-w-0 flex-[100%] flex-shrink-0 flex-grow-0"
           >
-            <Image
-              className="block max-h-96 min-h-[10rem] w-full object-cover"
-              src={project.src}
-              alt={project.alt}
-              width={1920}
-              height={1080}
-            />
+            <Link target="_blank" href={project.src} title={project.alt}>
+              <Image
+                className="block max-h-96 min-h-[10rem] w-full object-contain"
+                src={project.src}
+                alt={project.alt}
+                title={project.alt}
+                width={1920}
+                height={1080}
+              />
+            </Link>
           </div>
         ))}
       </div>

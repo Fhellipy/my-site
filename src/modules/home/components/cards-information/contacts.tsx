@@ -12,10 +12,13 @@ export function Contacts() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="h-[450px] rounded-xl bg-zinc-900 p-2"
+      className="h-[450px] rounded-xl bg-zinc-900"
       containerClassName="p-2"
     >
-      <div id="contatos" className="flex flex-col gap-4">
+      <div
+        id="contatos"
+        className="flex h-full w-full flex-col gap-4 bg-[rgba(0,0,0,0.5)] p-4"
+      >
         <h1 className="text-center text-2xl font-black uppercase">Contatos</h1>
         <div className="mt-1 flex flex-col gap-2 sm:gap-4">
           <Link

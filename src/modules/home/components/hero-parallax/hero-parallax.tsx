@@ -44,7 +44,7 @@ export function HeroParallax({ items = [] }: HeroParallaxProps) {
           {items[0] && <ItemParallax item={items[0]} translate={translateX} />}
         </motion.div>
 
-        <motion.div className="flex min-h-[--view-height] flex-row items-center justify-center space-x-20 bg-black">
+        <motion.div className="flex min-h-[--view-height] flex-row items-center justify-center space-x-20 bg-black text-foreground">
           {items[1] && (
             <ItemParallax item={items[1]} translate={translateXReverse} />
           )}

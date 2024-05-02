@@ -25,12 +25,13 @@ export function Tools() {
               initial={{ opacity: 0, translateX: 50, translateY: -50 }}
               animate={{ opacity: 1, translateX: 0, translateY: 0 }}
               transition={{ duration: 0.3, delay: i * 0.2 }}
-              className="flex h-28 w-28 items-center justify-center rounded border bg-zinc-900 p-2"
+              className="flex h-28 w-28 items-center justify-center rounded border bg-zinc-800 p-2"
             >
               <Image
                 className="object-cover"
                 src={icon.src}
                 alt={icon.alt}
+                title={icon.alt}
                 width={70}
                 height={70}
               />

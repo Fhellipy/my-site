@@ -9,10 +9,13 @@ export function AboutMe() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="h-[450px] overflow-auto rounded-xl bg-zinc-900 p-4"
+      className="rounded-xl bg-zinc-900 sm:h-[450px]"
       containerClassName="p-2"
     >
-      <div id="sobre" className="flex flex-col gap-2">
+      <div
+        id="sobre"
+        className="flex h-full w-full flex-col gap-2 overflow-auto bg-[rgba(0,0,0,0.5)] p-4"
+      >
         <h2 className="text-center text-2xl font-black uppercase">Sobre mim</h2>
 
         <p className="text-center text-sm font-black text-secondary-foreground sm:text-justify sm:text-base">

@@ -1,37 +1,22 @@
 import { PROFESSIONAL_EXPERIENCE_DATA } from "@modules/home";
 import { BackgroundGradient } from "@shared/components/common";
-import Link from "next/link";
 import { ProjectsCarousel } from "./projects-carousel";
 
 export function ProfessionalExperienceList() {
   return (
-    <section className="flex flex-col gap-4 px-6 py-8">
+    <section className="flex flex-col gap-6 px-6 py-8">
       <h2 className="text-2xl font-black">Experiência Profissional</h2>
 
-      <div className="flex flex-col flex-wrap items-center justify-between gap-2 sm:flex-row sm:gap-6">
+      <div className="grid grid-cols-1 items-center justify-between gap-6 xl:grid-cols-2">
         {PROFESSIONAL_EXPERIENCE_DATA.map((project, index) => (
           <BackgroundGradient
             key={index}
-            className="min-w-[250px] max-w-[400px] rounded-xl bg-zinc-900"
+            className="shadow-custom flex w-fit flex-col-reverse items-center gap-4 rounded-xl bg-black p-4 text-foreground md:flex-row lg:gap-6"
             containerClassName="w-fit"
           >
+            <p className="h-full text-justify md:w-80">{project.resume}</p>
+
             <ProjectsCarousel projects={project.images} />
-
-            <div className="flex h-[400px] flex-col items-end gap-2 p-4">
-              <div className="w-full overflow-auto text-justify">
-                {project.description}
-              </div>
-
-              {project.link && (
-                <Link
-                  href={project.link}
-                  target="_blank"
-                  className="w-fit whitespace-nowrap rounded border-primary bg-primary px-4 py-2 font-bold hover:opacity-80"
-                >
-                  Saiba mais
-                </Link>
-              )}
-            </div>
           </BackgroundGradient>
         ))}
       </div>

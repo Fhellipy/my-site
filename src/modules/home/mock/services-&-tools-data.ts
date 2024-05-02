@@ -44,6 +44,10 @@ export const SERVICES_TOOLS_DATA = [
     alt: "Logo do Tailwind CSS",
   },
   {
+    src: "/graphql.svg",
+    alt: "Logo do Graphql",
+  },
+  {
     src: "/firebird.svg",
     alt: "Logo do Firebird",
   },
@@ -66,6 +70,10 @@ export const SERVICES_TOOLS_DATA = [
   {
     src: "/storybook.svg",
     alt: "Logo do Storybook",
+  },
+  {
+    src: "/socket_io.svg",
+    alt: "Logo do Socket.io",
   },
   {
     src: "/json.svg",
